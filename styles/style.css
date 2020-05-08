@@ -1,0 +1,17 @@
+.index a {
+    font: 25px Verdana;
+}
+
+.arc path {
+    stroke: #000;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+.container a {
+    margin: auto;
+    max-width: 1128px;
+}
