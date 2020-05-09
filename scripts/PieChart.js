@@ -26,18 +26,15 @@ d3.csv('./data/master.csv', function (row) {
     row.suicides_no = Number(row.suicides_no)
     return row;
 }, function (suicides) {
-    console.log(suicides)
     couters = {male: 0, female: 0}
-    for (let row_key in suicides) {
-        let row = suicides[row_key]
+    suicides.forEach(function myFunction(row, index) {
+
         if (row.sex === "male") {
             couters.male += row.suicides_no
         } else if (row.sex === "female") {
             couters.female += row.suicides_no
         }
-    }
-    console.log(couters.male);
-    console.log(couters.female);
+    });
 
     let color = d3.scaleOrdinal()
         .domain(couters)
